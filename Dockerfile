@@ -2,7 +2,7 @@ FROM alpine:edge
 
 LABEL maintainer="Riadh Habbachi <habbachi.riadh@gmail.com>" \
       version="1.0.11-r1" \
-      description="Borgbackup alpine based docker image."
+      description="Borgbackup alpine based docker image. Deduplicating archiver with compression and authenticated encryption."
 
 ENV BORGBACKUP_VERSION="1.0.11-r1"
 
