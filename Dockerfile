@@ -1,10 +1,7 @@
 # Builder stage.
 FROM alpine:3.6 as builder
 
-# ENV RSA_PRIVATE_KEY_NAME ssh.rsa
-# ENV PACKAGER_PRIVKEY /home/builder/${RSA_PRIVATE_KEY_NAME}
 ENV REPODEST /packages
-ENV PACKAGER="Riadh Habbachi<habbachi.riadh@gmail.com>"
 
 # Pull in assets from context.
 ADD abuilder /usr/local/bin/
