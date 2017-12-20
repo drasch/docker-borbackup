@@ -27,7 +27,7 @@ RUN /usr/local/bin/abuilder -r
 FROM alpine:3.6 as main
 
 LABEL maintainer="Riadh Habbachi<habbachi.riadh@gmail.com>" \
-      version="1.0.11-r1" \
+      version="1.1.3" \
       description="Borgbackup docker image based on alpine. Deduplicating \
       archiver with compression and authenticated encryption."
 
@@ -58,3 +58,5 @@ RUN passwd -u borg
 COPY supervisord.conf /etc/supervisord.conf
 
 EXPOSE 22
+
+CMD ["/usr/bin/supervisord"]
