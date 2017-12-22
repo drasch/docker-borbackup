@@ -30,6 +30,12 @@ docker create \
 
 After creating the container you will need to start the container add your own public keys
 
+### Links
+
+* Github Repo: https://github.com/rhabbachi/docker-borgbackup
+* Docker Hub: https://hub.docker.com/r/rhabbachi/borgbackup
+* Dockerfile: https://hub.docker.com/r/rhabbachi/borgbackup/~/dockerfile/
+
 ### Credits
 
 * Forked from [b3vis/borg-server](https://github.com/b3vis/borg-server)
