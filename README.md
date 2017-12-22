@@ -1,9 +1,13 @@
-# Borg Backup Server Container
-![alt text](https://borgbackup.readthedocs.io/en/stable/_static/logo.png "Borgbackup")
+# BorgBackup Docker image
+[![Docker Stars](https://img.shields.io/docker/stars/rhabbachi/borgbackup.svg)]()
+[![Docker Pulls](https://img.shields.io/docker/pulls/rhabbachi/borgbackup.svg)]()
+[![Docker Automated build](https://img.shields.io/docker/automated/rhabbachi/borgbackup.svg)]()
+[![Docker Build Status](https://img.shields.io/docker/build/rhabbachi/borgbackup.svg)]()
 
 ### Description
 
-My take on a Borgbackup Server as a Docker container to faciliate the backing up of remote machines using [Borgbackup](https://github.com/borgbackup)
+My take on a Borgbackup Server as a Docker container to faciliate the backing
+up of remote machines using [Borgbackup](https://www.borgbackup.org/).
 
 ### Usage
 
@@ -23,9 +27,11 @@ docker create \
 ```
 
 ### Note
+
 After creating the container you will need to start the container add your own public keys
 
 ### Credits
+
 * Forked from [b3vis/borg-server](https://github.com/b3vis/borg-server)
 * 128.io's [alpine-abuild image](https://gitlab.128.io/my-projects/docker-images/alpine-abuild).
 * Andy Shinn's [docker-alpine-abuild](https://github.com/andyshinn/docker-alpine-abuild)
