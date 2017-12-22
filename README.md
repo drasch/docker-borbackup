@@ -24,3 +24,11 @@ docker create \
 
 ### Note
 After creating the container you will need to start the container add your own public keys
+
+### Credits
+* Forked from [b3vis/borg-server](https://github.com/b3vis/borg-server)
+* 128.io's [alpine-abuild image](https://gitlab.128.io/my-projects/docker-images/alpine-abuild).
+* Andy Shinn's [docker-alpine-abuild](https://github.com/andyshinn/docker-alpine-abuild)
+* Alpine's
+  [APKBUILD](https://git.alpinelinux.org/cgit/aports/tree/community/borgbackup/APKBUILD?h=3.7-stable)
+  for Borgbackup contributed by Olivier Mauras, maintained by Jakub Jirutka.
