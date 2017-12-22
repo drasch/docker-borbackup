@@ -6,29 +6,50 @@
 
 ### Description
 
-My take on a Borgbackup Server as a Docker container to faciliate the backing
-up of remote machines using [Borgbackup](https://www.borgbackup.org/).
+[Borgbackup](https://www.borgbackup.org/) Server as a Docker image to
+faciliate the backing up of remote machines.
 
 ### Usage
 
-I personally like to split my ssh keys out of the main container to make updates and management easier. To achieve this I create a persistent storage container;
+Sample one shot command to run the backup server.
 
-`docker run -d -v /home/borg/.ssh --name borg-keys-storage busybox:latest`
-
-* Container Creation:
-```
-docker create \
-  --name=borg-server \
-  --restart=always \
-  --volumes-from borg-keys-storage \
-  -v path/to/backups:/backups \
-  -p 2022:22 \
-  b3vis/borg-server
+```sh
+$ docker run -d --name 'borgserver' -v "$HOME/.ssh:/home/borg/.ssh" -v "<path/to/backups/root/folder/>:/backups" rhabbachi/borgbackup:1.1.3
 ```
 
-### Note
+#### Compose service example
 
-After creating the container you will need to start the container add your own public keys
+```yaml
+  borgserver:
+    image: rhabbachi/borgbackup:1.1.3
+    container_name: 'borgserver'
+    environment:
+      # Optional.
+      - VIRTUAL_HOST=<lan url>
+    ports:
+      - "5022:22"
+    volumes:
+      - <Backup root folder>:/backups
+      - <SSH public key>:/home/borg/.ssh
+    restart: unless-stopped
+```
+
+Same but for ARM based devices (built and tested with a Raspberry PI 2 Model B):
+
+```yaml
+  borgserver:
+    image: rhabbachi/borgbackup:1.1.3-armhf
+    container_name: 'borgserver'
+    environment:
+      # Optional.
+      - VIRTUAL_HOST=<lan url>
+    ports:
+      - "5022:22"
+    volumes:
+      - <Backup root folder>:/backups
+      - <SSH public key>:/home/borg/.ssh
+    restart: unless-stopped
+```
 
 ### Links
 
