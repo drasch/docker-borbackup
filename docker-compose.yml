@@ -1,0 +1,8 @@
+borg:
+  image: alpine-borg-1.1.13
+  volumes:
+    - home-borg:/home/borg/.ssh/
+    - /share/backup/borg:/backups/backup1
+    - /share/Backup2:/backups/backup2
+  ports:
+    - "2022:22"

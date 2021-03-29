@@ -1,0 +1,2 @@
+command="borg serve --verbose --restrict-to-path /backups",
+         restrict ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC23YSqbQTAhm84NTkl22IDVA6ykPT7HdSygmb0AhDORhSXh6owrcXA1meoRR71nDCActlLkMgBmTZilpKG4smaKa7pTykuIp9+ch2CoRNJGC9dEKJJilxBs6SEKkDVVy0hLtFJdCmIi+nW6k0B96E/b+pfoDufk9D6aCjnTmGm1OrX0SDdrhCJJun1Xjo/u7HacUtCoJYOBN13ZsZ6HYbw1DbKY11ExGHI4IS9c1UophTSZ5FKC3wVSLddfd/nVqt4zSL4NXO9G21EnhvzHQLl1c5leBDeoWE09dlN9x0f0svBfQP1bTzqUm6fOaBhCYfTTIipA5WHL0U+0e4nX/XX root@snape
